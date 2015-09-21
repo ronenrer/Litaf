@@ -68,11 +68,19 @@
 					</div><!--/.container-fluid -->
       			</nav>
 			</header>
-			<?php if (is_front_page()):?>
-				<div class="container">
-					<div class="fullwidth">	
-							<img src="<?php echo get_stylesheet_directory_uri()?>/library/images/MainPic.jpg"/>
+			<div class="page-title">
+				<div class="container wide">
+					<?php if (is_front_page()):?>
+						<img src="<?php echo get_stylesheet_directory_uri()?>/library/images/MainPic.jpg"/>
+					<div class="intro-text">
+						<h1>
+							<span>דוח משרד החינוך קבע:</span>
+							"שיטת ליט"ף היא המקדמת ביותר את התלמידים ברכישת מיומנויות הקריאה"
+						</h1>
 					</div>
-				</div>
-  
-			<?php endif;?>			
+					<?php  else:?>
+						<h1><?php the_title();?></h1>
+					<?php endif;?>
+				</div>  
+			
+			</div>			

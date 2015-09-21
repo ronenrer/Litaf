@@ -991,6 +991,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/library\/images\/Artboard 1.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 144447,
+		"inputAbbreviatedPath": "\/library\/images\/Artboard 1.jpg",
+		"outputAbbreviatedPath": "\/library\/images\/Artboard 1.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/library\/images\/custom-post-icon.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -1275,7 +1286,7 @@
 	},
 "hooks": [
 	],
-"lastSavedByUser": "Ronenrer",
+"lastSavedByUser": "admin",
 "manualImportLinks": {
 	},
 "projectAttributes": {

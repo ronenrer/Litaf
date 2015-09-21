@@ -58,7 +58,14 @@ body{
 	background:@brand-dark;
 	overflow-x: hidden;
 }
-
+.header nav > .container{
+	@media (min-width: @screen-lg-desktop) {
+		width:1092px;
+	}
+	@media (min-width:1400px) {
+		width:1296px;
+	}
+}
 .header{position: relative;height:130px;}
 .navbar-toggle{
 	position:absolute;
@@ -78,18 +85,49 @@ body{
 .navbar-nav > li a{
 	&:hover,&:focus{background:none;color:@brand-accent;}
 }
-.fullwidth{
-	 @media (min-width:@screen-lg-desktop) {
-	 	margin:0 -50px;
-	 }
-	 @media (min-width: 1480px) {
-	 	margin:0 -10%;
+.container.wide{
+	 @media (min-width: 1400px) {
+	 	width:1390px;
 	 }
 	
 }
 .embed-responsive{width:100%;height:100%;}
 img{max-width:100%;height:auto;}
 #inner-content{padding-top:40px;}
+.page-title{
+	.container{
+		position:relative;
+		@media (min-width: @screen-lg-desktop) {
+			padding:0;
+		}
+	}
+}
+.intro-text{
+	position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    padding: 20px;
+    background: #295bb0;
+    text-align: center;
+  	background:@brand-dark;
+  	@media (min-width:@screen-lg-desktop) {
+  		  width: 1096px;
+  		}
+  	@media (min-width: 1400px) {
+  		  width: 1300px;
+  		}
+	h1{
+		color:#fff;
+		font-size:36px;
+		margin-top:0;
+		span{
+			display:block;
+			font-size:30px;
+		}
+	}
+}
 .main-features{
 	.feature{
 		position:relative;
@@ -124,26 +162,7 @@ img{max-width:100%;height:auto;}
 	margin-top:7px;
 }
 .home-bottom{
-	.instagram {
-		position:relative;
-		.widgettitle{
-	  		margin-top:0;
-	  		padding:15px 0;
-	  		font-size:26px;
-	  	}
-	  	#sb_instagram #sbi_load .fa, #sb_instagram .sbi_follow_btn .fa{margin-left:7px;margin-right:0;}
-	  	#sb_instagram #sbi_load .sbi_follow_btn {
-		  	position: absolute;
-		  	top: 11px;
-			left: 0;
-			a{
-				padding:5px 10px !important;
-				background:none !important;
-				border:1px solid @brand-accent-light;
-			}
-	  	}	
-	  }
-	  .selfy-girl{max-width:45%;}
+	
  }
 .sidebar{
 	padding:0;
@@ -152,60 +171,7 @@ img{max-width:100%;height:auto;}
 		margin-bottom:40px;
 	}
 }
-.current-info ,.weather{padding:0;height:92px;}
-.current-info{
-	background:@brand-primary;
-	text-align:center;
-	color:@brand-accent-light;
-	font-size:@font-size-h3;
-	.widget{margin-bottom:0}
-	.modulewidget-upcoming_events-2-title{
-		width:auto !important;
-		background: none;
-		border:0;		
-		.pad{
-			position: relative;
-			text-align:center;
-			height:92px;
-			a{
-				line-height: 1.2em;
-			 	display: block;
-			 	position: absolute;
-			 	top: 50%;
-			 	left:50%;
-			 	.translate(-50%,-50%);
-			 	color:@brand-accent !important;
-			 	font-size:24px !important;font-family:@font-family-base !important;
-			 	pointer-events: none;
-			 	br{display: none;}
-			}		 
-		}
-		div{padding:0 !important}	 	
-		hr{display:none;}			
-	}
-	#titlewidget-upcoming_events-2-title:link, #see_morewidget-upcoming_events-2-title{color:@brand-accent !important;}
-}
-.awesome-weather-wrap{
-	border-right:1px solid #fff;
-	height:100%;
-	padding:4%;
-	.awesome-weather-cover{
-		background-size:contain;
-		background: no-repeat right center ;
-	}
-	.awesome-weather-current-temp{
-		font-size:32px;
-		height:100%;
-		width:50%;
-		float:left;
-		color:@brand-accent-light;
-		font-family: 'Alef Hebrew';
-		sup{
-			font-size:@font-size-small
-		}
-	}
-}
-.awesome-weather-header,.awesome-weather-forecast{display:none}
+
 .sidebar ,.home-bottom{
 	.widgettitle{
 		font-size:26px;
@@ -217,74 +183,6 @@ img{max-width:100%;height:auto;}
 	}
 }
 
-.sidebar .spider_calendar{
-	border-top:1px solid #fff;
-	.calmonth_table{
-		padding: 15px 0 0 !important;
-		.cala_arrow{paddin-top:3px !important;}
-	}
-	#calendar_1{
-		width:100% !important;
-	 > table{width: 100% !important;}
-	}
-	#calendar_1 .cala_arrow a:link, #calendar_1 .cala_arrow a:visited{font-size:13px !important;}
-	.calbg{
-		background:@brand-dark;
-		background-image: none !important;
-	}
-	.cell_body{
-		font-family: @font-family-en;
-		background-color:@brand-dark !important;
-		td{
-			padding:5px !important;
-			font-size:13px !important;
-			font-weight:700 !important;	
-			a{text-decoration: none !important;}
-			&:first-child{border-right:0 !important;}	
-			&:last-child{border-left:0 !important;}		
-			#cat_width b{color:#fff !important;}
-			a{}
-
-		}
-		&.days{
-			td{
-				border:0 !important;
-				padding: 10px 5px !important;
-				background:none !important;
-				font-size:14px !important;
-			}
-		}
-	}
-	#calendar_1 .cala_day a:hover{font-size:13px !important;}
-}
-#cats_widget_1{
-	padding:12px ;
-	background-color: @gray-lighter;
-	border-top:1px solid #fff;
-	li{
-		display:inline;
-		p,p:first-letter{
-			color:@text-color !important;
-			margin-bottom: 0}
-		p{
-			left:0;
-			font-size:@font-size-small;
-			&:first-child{
-				border-radius:50%;
-				width:12px;
-				height:12px;
-				line-height: 12px;
-  				margin:0 4px;
-			}
-		}
-	}
-}
-#TB_overlay{background:none !important;}
-#widget_sp_image-6 img{
-	padding: 2px 0;
-  	border-top: 1px solid @brand-accent;
-  	border-bottom: 1px solid @brand-accent;
-}
 /*******************
 FOOTER
 ********************/
@@ -354,16 +252,7 @@ Pages
 		height:100%;
 		background: rgba(0,0,0,0.2);
 	}
-	.page-title{
-		position:absolute;
-		font-size:@font-size-h1;
-		font-weight:700;
-		color:#fff;
-		bottom:20px;
-		right:70px;
-		margin:0;
-		text-shadow: -2px 3px 10px rgba(0, 0, 0, 0.4);
-	}
+	
 }
 ol.special{
 	list-style:none;
@@ -604,10 +493,10 @@ ACCORDION
 				padding:90px 10px 0;
 				line-height:1;
 				color:@gray;
-				font-size:16px;
+				font-size:14px;
 			}
 			&:last-child{
-				a{border-left:0;}
+				border-left:0;
 			}
 			&.menu-item-has-children{
 				a:hover,a:focus{
@@ -628,9 +517,7 @@ ACCORDION
 			 }
 		}
 	}
-	body:not(.page-template-page-fullwidth) #main{
-		width:73%;
-	}
+
 	.sidebar{
 		width:27%;
 		#widget_sp_image-3{
@@ -661,6 +548,7 @@ ACCORDION
 		
  }
 @media (min-width:@screen-lg-desktop){
+	
 	ul#menu-main{
 		
 	}
@@ -680,7 +568,13 @@ ACCORDION
 		}
 	}
 }
-
+@media (min-width:1400px){
+	ul#menu-main>li>a {
+		font-size:18px;
+		padding-right:20px;
+		padding-left:19px;
+	}
+}
 @media (max-width: @screen-md){ 
   .row-offcanvas {
     position: relative;
